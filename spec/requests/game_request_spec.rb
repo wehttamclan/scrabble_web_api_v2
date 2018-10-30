@@ -7,7 +7,7 @@ describe '/api/v1/games/id' do
     play_1 = create(:play, word: 'BBBBB', game: game_1, user: user_1)
     play_2 = create(:play, word: 'ABBBBB', game: game_1, user: user_2)
 
-    get '/api/v1/games/1'
+    get "/api/v1/games/#{game_1.id}"
 
     expect(response).to be_successful
 
