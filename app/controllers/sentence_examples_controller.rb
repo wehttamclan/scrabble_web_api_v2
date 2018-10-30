@@ -1,0 +1,2 @@
+class SentenceExamplesController < ApplicationController
+end
