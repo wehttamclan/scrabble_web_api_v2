@@ -6,7 +6,9 @@ class SentenceFacade
   end
 
   def examples
-    
+    sentences.map do |sentence|
+      Sentence.new(sentence) if ["British", "Canadian"].include?(sentence[:regions].first)
+    end
   end
 
   def sentences
