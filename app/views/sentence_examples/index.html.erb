@@ -1,4 +1,8 @@
-<h3>Examples for using <%= @facade.word %></h3>
-<%= @facade.examples.each do %>
+<h3>Examples for using '<%= @facade.word.downcase %>'</h3>
 
+<div class="examples">
+
+<% @facade.examples.each do |sentence| %>
+  <p class="example"><%= sentence.text %><p>
 <% end %>
+</div>

@@ -10,8 +10,10 @@ describe 'Examples' do
     # And I click "Submit"
     click_on 'Submit'
     # Then I should see a message that says "Examples for using 'mindfulness'"
+    expect(page).to have_content "Examples for using 'mindfulness'"
+    
     within(first(".example")) do
-      expect(current_page).to have_content "Examples for using 'mindfulness'"
+      expect(page).to have_content("Meditation is one way to express mindfulness in a dedicated, concentrated manner.")
       # And I should see a list of sentences with examples of how to use the word
       # And I should see only sentences where the region for usage is "Brittish" or "Canadian"
       # And I should not see sentences for any other regions (or blank regions)

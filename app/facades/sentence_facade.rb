@@ -8,7 +8,7 @@ class SentenceFacade
   def examples
     sentences.map do |sentence|
       Sentence.new(sentence) if ["British", "Canadian"].include?(sentence[:regions].first)
-    end
+    end.compact
   end
 
   def sentences
