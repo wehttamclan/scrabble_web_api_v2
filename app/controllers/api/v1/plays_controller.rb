@@ -4,7 +4,7 @@ class Api::V1::PlaysController < ApiBaseController
     if play.save
       render json: {}, message: "201 Created Response", status: 201
     else
-      render status: 404
+      render json: {message: "Nope"}, status: 404
     end
   end
 
