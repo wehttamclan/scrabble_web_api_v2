@@ -13,8 +13,8 @@ describe '/api/v1/games/id' do
 
     game = JSON.parse(response.body, symbolize_names: true)
 
-    expect(game).to have_key 'game_id'
-    expect(game).to have_key 'scores'
+    expect(game).to have_key(:game_id)
+    expect(game).to have_key(:scores)
     expect(game[:scores].length).to eq 2
     expect(game[:scores].first).to have_key 'user_id'
     expect(game[:scores].first).to have_key 'score'
