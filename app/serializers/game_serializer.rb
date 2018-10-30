@@ -15,14 +15,14 @@ class GameSerializer < ActiveModel::Serializer
 
   def player_1_data
     {
-      id: game.player_1.id,
+      user_id: game.player_1.id,
       score: game.player_1.plays.sum(:score)
     }
   end
 
   def player_2_data
     {
-      id: game.player_2.id,
+      user_id: game.player_2.id,
       score: game.player_2.plays.sum(:score)
     }
   end
