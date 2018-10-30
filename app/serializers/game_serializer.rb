@@ -6,6 +6,24 @@ class GameSerializer < ActiveModel::Serializer
   end
   
   def scores
-    
+    [player_1_data, player_2_data]
+  end
+
+  def game
+    Game.find(object.id)
+  end
+
+  def player_1_data
+    {
+      id: game.player_1.id,
+      score: game.player_1.plays.sum(:score)
+    }
+  end
+
+  def player_2_data
+    {
+      id: game.player_2.id,
+      score: game.player_2.plays.sum(:score)
+    }
   end
 end

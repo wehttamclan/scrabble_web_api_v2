@@ -20,17 +20,3 @@ describe '/api/v1/games/id' do
     expect(game[:scores].first).to have_key 'score'
   end
 end
-
-# {
-#   "game_id":1,
-#   "scores": [
-#     {
-#       "user_id":1,
-#       "score":15
-#     },
-#     {
-#       "user_id":2,
-#       "score":16
-#     }
-#   ]
-# }
